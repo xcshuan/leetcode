@@ -1,0 +1,9 @@
+[package]
+name = "leetcode-rust"
+version = "0.1.0"
+authors = ["davis xiang <xcshuan@hotmail.com>"]
+edition = "2018"
+
+[dependencies]
+leetcode_prelude = "0.2"
+rand = "0.6"
