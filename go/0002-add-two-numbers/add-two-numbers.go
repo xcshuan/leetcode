@@ -1,7 +1,5 @@
 // Definition for singly-linked list.
-package main
-
-import "fmt"
+package problem0002
 
 type ListNode struct {
 	Val  int
@@ -39,40 +37,4 @@ func addTwoNumbers(l1 *ListNode, l2 *ListNode) *ListNode {
 		temp.Next.Val = remain
 	}
 	return ans
-}
-
-func main() {
-	a := new(ListNode)
-	a.Val = 5
-	b := new(ListNode)
-	b.Val = 3
-	c := new(ListNode)
-	c.Val = 9
-	b.Next = c
-	a.Next = b
-	x := new(ListNode)
-	x.Val = 3
-	y := new(ListNode)
-	y.Val = 7
-	z := new(ListNode)
-	z.Val = 6
-	y.Next = z
-	x.Next = y
-	printListNode(a)
-	printListNode(x)
-	res := addTwoNumbers(a, x)
-	printListNode(res)
-}
-
-func printListNode(l *ListNode) {
-	var x = l
-	fmt.Printf("[")
-	for x != nil {
-		fmt.Printf("%d", x.Val)
-		if x.Next != nil {
-			fmt.Printf(", ")
-		}
-		x = x.Next
-	}
-	fmt.Printf("]\n")
 }
